@@ -1,12 +1,10 @@
-import { Pinecone } from '@pinecone-database/pinecone'
+const { Pinecone } = require('@pinecone-database/pinecone')
 
-const pinecone = new Pinecone({ apiKey: process.env.PINECONE_API_KEY })
-
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end()
-  const { query } = req.body
 
   try {
+    const pinecone = new Pinecone({ apiKey: process.env.PINECONE_API_KEY })
     const index = pinecone.index(process.env.PINECONE_ARTICLES_INDEX || 'pitchiq-articles')
     const results = await index.query({
       vector: new Array(1536).fill(0),
