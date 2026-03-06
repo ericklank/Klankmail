@@ -1,0 +1,22 @@
+.page { background: var(--bg); min-height: 100vh; }
+
+.banner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 40px; background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 10;
+}
+
+.logo {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.logoMark {
+  width: 26px; height: 26px; background: var(--accent);
+  border-radius: 7px; display: flex; align-items: center;
+  justify-content: center; color: #fff;
+}
+
+.bannerText { font-size: 13px; color: var(--text-muted); }

@@ -1,0 +1,56 @@
+.page { padding: 40px; animation: fadeIn 0.4s ease; }
+.header { margin-bottom: 28px; }
+.title { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+.sub { font-size: 14px; color: var(--text-secondary); }
+
+.statsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 24px; }
+
+.statCard {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 20px;
+}
+
+.statIcon {
+  width: 36px; height: 36px; border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 14px;
+}
+
+.accent .statIcon { background: var(--accent-soft); color: var(--accent); }
+.green .statIcon { background: var(--green-soft); color: var(--green); }
+.amber .statIcon { background: var(--amber-soft); color: var(--amber); }
+
+.statValue { font-family: var(--font-display); font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+.statLabel { font-size: 13px; color: var(--text-secondary); }
+
+.cta {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; margin-bottom: 24px;
+}
+
+.ctaContent h2 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+.ctaContent p { font-size: 14px; color: var(--text-secondary); }
+
+.comingSoon {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px;
+}
+
+.comingSoonLabel {
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 16px;
+}
+
+.featureList { display: flex; flex-direction: column; gap: 10px; }
+
+.featureItem {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; color: var(--text-secondary);
+}
+
+.featureDot {
+  width: 6px; height: 6px; background: var(--accent);
+  border-radius: 50%; flex-shrink: 0;
+}

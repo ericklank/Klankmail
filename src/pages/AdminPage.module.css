@@ -1,0 +1,24 @@
+.page { padding: 40px; animation: fadeIn 0.4s ease; }
+.header { margin-bottom: 28px; }
+.title { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+.sub { font-size: 14px; color: var(--text-secondary); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+
+.card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px;
+  transition: border-color 0.2s;
+}
+.card:hover { border-color: var(--border-light); }
+
+.cardHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+
+.iconWrap {
+  width: 36px; height: 36px; background: var(--accent-soft);
+  border-radius: var(--radius-sm); display: flex; align-items: center;
+  justify-content: center; color: var(--accent);
+}
+
+.cardTitle { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+.cardDesc { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
