@@ -16,7 +16,10 @@
     "lucide-react": "^0.400.0",
     "framer-motion": "^11.2.12",
     "react-hot-toast": "^2.4.1",
-    "clsx": "^2.1.1"
+    "clsx": "^2.1.1",
+    "@anthropic-ai/sdk": "^0.24.0",
+    "@pinecone-database/pinecone": "^3.0.0",
+    "redis": "^4.6.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",
