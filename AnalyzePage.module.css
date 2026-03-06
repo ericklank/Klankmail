@@ -1,0 +1,275 @@
+.page {
+  padding: 40px;
+  max-width: 900px;
+  animation: fadeIn 0.4s ease;
+}
+
+.header {
+  margin-bottom: 28px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.sub {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.profileBanner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--amber-soft);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--amber);
+  margin-bottom: 24px;
+}
+
+.profileBanner a {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.dropzone {
+  border: 2px dashed var(--border-light);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dropzone:hover {
+  border-color: var(--accent);
+  background: var(--bg-elevated);
+}
+
+.dragOver {
+  border-color: var(--accent) !important;
+  background: var(--accent-soft) !important;
+}
+
+.hasFile {
+  cursor: default;
+  border-style: solid;
+  border-color: var(--accent);
+}
+
+.dropContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px;
+  text-align: center;
+}
+
+.uploadIcon {
+  color: var(--text-muted);
+}
+
+.dropTitle {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.dropSub {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.fileInfo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 24px;
+  width: 100%;
+}
+
+.fileIcon {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.fileName {
+  font-weight: 500;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.fileSize {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.removeFile {
+  margin-left: auto;
+  background: transparent;
+  color: var(--text-muted);
+  padding: 6px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.removeFile:hover {
+  background: var(--red-soft);
+  color: var(--red);
+}
+
+.config {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.stages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.stageBtn {
+  padding: 6px 14px;
+  border-radius: 99px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.stageBtn:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+.stageActive {
+  background: var(--accent-soft) !important;
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+}
+
+.textarea {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 14px;
+  color: var(--text-primary);
+  resize: vertical;
+  transition: border-color 0.2s;
+  line-height: 1.5;
+}
+
+.textarea:focus {
+  border-color: var(--accent);
+}
+
+.textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.repSummary {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+}
+
+.repLabel {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.repDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.repName {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.repEmail, .repPhone {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.repMissing {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--amber);
+}
+
+.analyzeBtn {
+  width: 100%;
+  justify-content: center;
+  padding: 14px !important;
+  font-size: 15px !important;
+  margin-top: auto;
+}
+
+.analyzeBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
