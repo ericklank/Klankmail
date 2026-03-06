@@ -1,4 +1,4 @@
-import Anthropic from '@anthropic-ai/sdk'
+const Anthropic = require('@anthropic-ai/sdk')
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
@@ -14,10 +14,10 @@ JSON schema:
   "discussedInCall": string[] (key topics covered, 5-8 items),
   "missedOpportunities": string[] (features/value props that weren't mentioned but would resonate, 3-5 items),
   "objectionsRaised": Array<{ objection: string, suggestion: string }>,
-  "digDeeper": Array<{ topic: string, question: string }> (unanswered topics with suggested follow-up questions),
+  "digDeeper": Array<{ topic: string, question: string }>,
   "recommendedNextSteps": string[] (3-5 concrete next actions, ordered by priority),
-  "followUpEmail": string (complete follow-up email with rep signature, HTML ok for links),
-  "proposal": string (1-page text proposal — company situation, recommended solution, 3 key value props, ROI framing, CTA),
+  "followUpEmail": string (complete follow-up email with rep signature),
+  "proposal": string (1-page text proposal),
   "salesforceFields": {
     "Account Name": string,
     "Contact Name": string,
@@ -29,20 +29,12 @@ JSON schema:
     "Budget Signals": string,
     "Decision Timeline": string,
     "Next Step": string,
-    "Most Recent Update": string (Who/What/When format)
+    "Most Recent Update": string
   },
-  "sfCoaching": Array<{ field: string, question: string }> (only include fields that were blank/unknown)
-}
+  "sfCoaching": Array<{ field: string, question: string }>
+}`
 
-Adapt the output based on deal stage:
-- discovery: focus on situation, gaps, qualifying questions
-- demo: focus on what resonated, objections, next steps
-- evaluation: focus on comparison angles, ROI, differentiation
-- negotiation/closing: focus on objections, timeline, stakeholders
-
-Rep signature: use the rep name, email, phone provided.`
-
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end()
 
   const { pdf, repName, repEmail, repPhone, repTitle, dealStage, notes } = req.body
