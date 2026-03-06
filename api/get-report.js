@@ -1,4 +1,4 @@
-import { createClient } from 'redis'
+const { createClient } = require('redis')
 
 async function getRedis() {
   const client = createClient({ url: process.env.pitchiq_REDIS_URL })
@@ -6,7 +6,7 @@ async function getRedis() {
   return client
 }
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'GET') return res.status(405).end()
 
   const { id } = req.query
